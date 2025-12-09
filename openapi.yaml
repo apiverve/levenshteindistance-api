@@ -1,0 +1,84 @@
+openapi: 3.0.4
+info:
+  title: Levenshtein Distance
+  description: Levenshtein Distance calculates the minimum number of single-character edits needed to transform one string into another.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/levenshteindistance:
+    post:
+      summary: Calculate Edit Distance
+      description: Levenshtein Distance calculates the minimum number of single-character edits needed to transform one string into another.
+      operationId: levenshteindistance
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  distance: 3
+                  similarity: 57.14
+                  string1Length: 6
+                  string2Length: 7
+                  string1: kitten
+                  string2: sitting
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                string1:
+                  type: string
+                  description: First string to compare (max 10,000 characters)
+                  example: kitten
+                string2:
+                  type: string
+                  description: Second string to compare (max 10,000 characters)
+                  example: sitting
+              required:
+              - string1
+              - string2
+              example:
+                string1: kitten
+                string2: sitting
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
