@@ -14,21 +14,14 @@ API_URL = 'https://api.apiverve.com/v1/levenshteindistance'
 
 def call_levenshteindistance_api():
     """
-    Make a POST request to the Levenshtein Distance API
+    Make a GET request to the Levenshtein Distance API
     """
     try:
-        # Request body
-        request_body &#x3D; {
-    &#x27;string1&#x27;: &#x27;kitten&#x27;,
-    &#x27;string2&#x27;: &#x27;sitting&#x27;
-}
-
         headers = {
-            'x-api-key': API_KEY,
-            'Content-Type': 'application/json'
+            'x-api-key': API_KEY
         }
 
-        response = requests.post(API_URL, headers=headers, json=request_body)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
