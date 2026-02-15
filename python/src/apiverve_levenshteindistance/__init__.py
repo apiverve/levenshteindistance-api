@@ -1,1 +1,3 @@
-from .apiClient import LevenshteindistanceAPIClient
+from .apiClient import LevenshteindistanceAPIClient, LevenshteindistanceAPIClientError
+
+__all__ = ['LevenshteindistanceAPIClient', 'LevenshteindistanceAPIClientError']
