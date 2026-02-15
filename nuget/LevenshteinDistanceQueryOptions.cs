@@ -12,14 +12,12 @@ namespace APIVerve.API.LevenshteinDistance
     {
         /// <summary>
         /// First string to compare (max 10,000 characters)
-        /// Example: kitten
         /// </summary>
         [JsonProperty("string1")]
         public string String1 { get; set; }
 
         /// <summary>
         /// Second string to compare (max 10,000 characters)
-        /// Example: sitting
         /// </summary>
         [JsonProperty("string2")]
         public string String2 { get; set; }
