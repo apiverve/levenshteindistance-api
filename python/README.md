@@ -44,7 +44,10 @@ from apiverve_levenshteindistance.apiClient import LevenshteindistanceAPIClient
 # Initialize the client with your APIVerve API key
 api = LevenshteindistanceAPIClient("[YOUR_API_KEY]")
 
-query = { "string1": "kitten", "string2": "sitting" }
+query = {
+    "string1": "kitten",
+    "string2": "sitting"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "string1": "kitten", "string2": "sitting" }
+query = {
+    "string1": "kitten",
+    "string2": "sitting"
+}
 ```
 
 ###### Simple Request
@@ -125,7 +131,10 @@ from apiverve_levenshteindistance.apiClient import LevenshteindistanceAPIClient,
 
 api = LevenshteindistanceAPIClient("[YOUR_API_KEY]")
 
-query = { "string1": "kitten", "string2": "sitting" }
+query = {
+    "string1": "kitten",
+    "string2": "sitting"
+}
 
 try:
     result = api.execute(query)
@@ -146,7 +155,10 @@ from apiverve_levenshteindistance.apiClient import LevenshteindistanceAPIClient,
 
 api = LevenshteindistanceAPIClient("[YOUR_API_KEY]")
 
-query = { "string1": "kitten", "string2": "sitting" }
+query = {
+    "string1": "kitten",
+    "string2": "sitting"
+}
 
 try:
     result = api.execute(query)
@@ -180,7 +192,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_levenshteindistance.apiClient import LevenshteindistanceAPIClient, LevenshteindistanceAPIClientError
 
-query = { "string1": "kitten", "string2": "sitting" }
+query = {
+    "string1": "kitten",
+    "string2": "sitting"
+}
 
 # Using context manager ensures proper cleanup
 with LevenshteindistanceAPIClient("[YOUR_API_KEY]") as api:
@@ -206,7 +221,10 @@ from apiverve_levenshteindistance.apiClient import LevenshteindistanceAPIClient
 # Enable debug mode
 api = LevenshteindistanceAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "string1": "kitten", "string2": "sitting" }
+query = {
+    "string1": "kitten",
+    "string2": "sitting"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -221,8 +239,12 @@ from apiverve_levenshteindistance.apiClient import LevenshteindistanceAPIClient
 
 api = LevenshteindistanceAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "string1": "kitten",
+    "string2": "sitting"
+}
+
 try:
-    query = { "string1": "kitten", "string2": "sitting" }
     result = api.execute(query)
     print(result)
 finally:
