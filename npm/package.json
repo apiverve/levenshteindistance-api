@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/levenshteindistance",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Levenshtein Distance calculates the minimum number of single-character edits needed to transform one string into another.",
   "main": "index.js",
   "types": "index.d.ts",
