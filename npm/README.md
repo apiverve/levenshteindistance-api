@@ -127,6 +127,7 @@ async function makeRequest() {
   "data": {
     "distance": 3,
     "similarity": 57.14,
+    "matchLevel": "medium",
     "string1Length": 6,
     "string2Length": 7,
     "string1": "kitten",
