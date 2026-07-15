@@ -12,8 +12,13 @@ public class BasicExample {
         LevenshteinDistanceAPIClient client = new LevenshteinDistanceAPIClient("YOUR_API_KEY_HERE");
 
         try {
-            // Execute the API request (no parameters required)
-            APIResponse response = client.execute(null);
+            // Request body
+            Map&lt;String, Object&gt; parameters &#x3D; new HashMap&lt;&gt;();
+        parameters.put(&quot;string1&quot;, &quot;kitten&quot;);
+        parameters.put(&quot;string2&quot;, &quot;sitting&quot;);
+
+            // Execute the API request
+            APIResponse response = client.execute(parameters);
 
             // Check if the request was successful
             if (response.isSuccess()) {
