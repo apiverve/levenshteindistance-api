@@ -25,26 +25,44 @@ namespace APIVerve.API.LevenshteinDistance
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
         [JsonProperty("distance")]
-        public long Distance { get; set; }
+        public long? Distance { get; set; }
 
         [JsonProperty("similarity")]
-        public double Similarity { get; set; }
+        public double? Similarity { get; set; }
+
+        [JsonProperty("matchLevel")]
+        public string MatchLevel { get; set; }
 
         [JsonProperty("string1Length")]
-        public long String1Length { get; set; }
+        public long? String1Length { get; set; }
 
         [JsonProperty("string2Length")]
-        public long String2Length { get; set; }
+        public long? String2Length { get; set; }
 
         [JsonProperty("string1")]
         public string String1 { get; set; }
 
         [JsonProperty("string2")]
         public string String2 { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
