@@ -18,7 +18,7 @@ servers:
 paths:
   /v1/levenshteindistance:
     post:
-      summary: Calculate Edit Distance
+      summary: Levenshtein Distance
       description: Calculate Levenshtein distance between two strings
       operationId: levenshteindistance
       parameters: []
