@@ -1,7 +1,7 @@
 {
     "name": "apiverve/levenshteindistance",
     "description": "Levenshtein Distance calculates the minimum number of single-character edits needed to transform one string into another.",
-    "version": "1.2.2",
+    "version": "1.2.3",
     "type": "library",
     "license": "MIT",
     "authors": [
