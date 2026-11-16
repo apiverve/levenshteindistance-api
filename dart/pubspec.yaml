@@ -1,6 +1,6 @@
 name: apiverve_levenshteindistance
 description: "Levenshtein Distance calculates the minimum number of single-character edits needed to transform one string into another."
-version: 1.2.5
+version: 1.2.6
 homepage: https://apiverve.com/marketplace/levenshteindistance?utm_source=dart&utm_medium=referral&utm_content=homepage
 repository: https://github.com/apiverve/levenshteindistance-api/tree/main/dart
 

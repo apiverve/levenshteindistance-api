@@ -49,8 +49,8 @@ final _formatPatterns = {
 /// For more information, visit: https://apiverve.com/marketplace/levenshteindistance?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
-/// * [string1] (required) - First string to compare (max 10,000 characters)
-/// * [string2] (required) - Second string to compare (max 10,000 characters)
+/// * [string1] (required) - First string to compare (max 10,000 characters) [maxLength: 10000]
+/// * [string2] (required) - Second string to compare (max 10,000 characters) [maxLength: 10000]
 class LevenshteindistanceClient {
   final String apiKey;
   final String baseUrl;
@@ -58,8 +58,8 @@ class LevenshteindistanceClient {
 
   /// Validation rules for parameters.
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
-    'string1': ValidationRule(type: 'string', required: true),
-    'string2': ValidationRule(type: 'string', required: true),
+    'string1': ValidationRule(type: 'string', required: true, maxLength: 10000),
+    'string2': ValidationRule(type: 'string', required: true, maxLength: 10000),
   };
 
   LevenshteindistanceClient(this.apiKey, {
