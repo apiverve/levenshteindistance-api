@@ -67,8 +67,8 @@ namespace APIVerve.API.LevenshteinDistance
         /// <summary>Validation rules for parameters</summary>
         private static readonly Dictionary<string, ValidationRule> _validationRules = new Dictionary<string, ValidationRule>
         {
-            { "string1", new ValidationRule { Type = "string", Required = true } },
-            { "string2", new ValidationRule { Type = "string", Required = true } }
+            { "string1", new ValidationRule { Type = "string", Required = true, MaxLength = 10000 } },
+            { "string2", new ValidationRule { Type = "string", Required = true, MaxLength = 10000 } }
         };
 
         /// <summary>Format validation patterns</summary>
