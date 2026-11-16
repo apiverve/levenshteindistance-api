@@ -30,7 +30,7 @@ class levenshteindistanceWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/levenshteindistance';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"string1":{"type":"string","required":true},"string2":{"type":"string","required":true}};
+        this.validationRules = {"string1":{"type":"string","required":true,"maxLength":10000},"string2":{"type":"string","required":true,"maxLength":10000}};
     }
 
     /**
